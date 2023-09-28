@@ -87,4 +87,22 @@ localhost:3000/debit/xxx
 localhost:3000/debit/xxx
 ```
 
+Credit Routes
+```
+- Get All
+localhost:3000/credit (for search: /credit?keyword=xxxx)
+
+- Get by ID
+localhost:3000/credit/xxx
+
+- Post Data
+localhost:3000/credit
+
+- Put Data
+localhost:3000/credit/xxx
+
+-Delete Data
+localhost:3000/credit/xxx
+```
+
 
