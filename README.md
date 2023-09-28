@@ -127,4 +127,8 @@ localhost:3000/credit/xxx
 localhost:3000/credit/xxx
 ```
 
+Database Structure
+
+<img width="1146" alt="struktur database" src="https://github.com/ASNProject/nodejs-payment-trash-api/assets/49858542/139c4dcf-19a6-4c7b-bd7c-fcd05e949e5d">
+
 
