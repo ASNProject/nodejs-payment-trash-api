@@ -11,6 +11,11 @@ Run program
 ```
 nodemon server.js
 ```
+Download Database
+```
+/mysql_database/db_payment_trash_api.sql
+```
+
 Routes
 
 Customer Routes
