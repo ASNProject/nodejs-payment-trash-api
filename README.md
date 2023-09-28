@@ -9,7 +9,7 @@ https://github.com/ASNProject/nodejs-payment-trash-api.git
 ```
 Run program
 ```
-node index.js
+nodemon server.js
 ```
 Routes
 
