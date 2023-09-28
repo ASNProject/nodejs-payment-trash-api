@@ -11,9 +11,13 @@ Run program
 ```
 nodemon server.js
 ```
-Download Database
+Documentation
 ```
-/mysql_database/db_payment_trash_api.sql
+- Download database
+/doc/mysql_database/db_payment_trash_api.sql
+
+- Download Postman file
+/doc/postman/Payment Trash.postman_collection.json
 ```
 
 Routes
