@@ -15,9 +15,11 @@
 const customer = require("./customer");
 const type_waste = require("./type_waste");
 const load = require("./load");
+const debit = require("./debit");
 const controller = {};
 
 controller.customer = customer;
 controller.type_waste = type_waste;
 controller.load = load;
+controller.debit = debit;
 module.exports = controller;

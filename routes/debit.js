@@ -12,16 +12,15 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-const customer = require("./customer");
-const status = require("./status");
-const type_waste = require("./type_waste");
-const load = require("./load");
-const debit = require("./debit");
-const model = {};
+const express = require("express");
+const router = express.Router();
+const db = require("../config/database/database");
+const controller = require("../controllers/index");
 
-model.customer = customer;
-model.status = status;
-model.type_waste = type_waste;
-model.load = load;
-model.debit = debit;
-module.exports = model;
+router.get("/", controller.debit.getAll);
+router.get("/:id_user", controller.debit.getOne);
+router.post("/", controller.debit.post);
+router.put("/:id_user", controller.debit.put);
+router.delete("/:id_user", controller.debit.delete);
+
+module.exports = router;

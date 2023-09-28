@@ -20,6 +20,7 @@ const bodyParser = require("body-parser");
 const customerRoutes = require("./routes/customer");
 const typeWasteRoutes = require("./routes/type_waste");
 const loadRoutes = require("./routes/load");
+const debitRoutes = require("./routes/debit");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -27,6 +28,8 @@ app.use(bodyParser.json());
 app.use("/customer", customerRoutes);
 app.use("/type-waste", typeWasteRoutes);
 app.use("/load", loadRoutes);
+app.use("/debit", debitRoutes);
+
 app.use((req, res, next) => {
   const error = new Error("API tidak ditemukan");
   error.status = 404;

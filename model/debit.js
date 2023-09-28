@@ -11,20 +11,19 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
+
 const Sequelize = require("sequelize");
 const db = require("../config/database/database");
-const Status = require("./status");
+const Customer = require("./customer");
 
-var customer = db.define(
-  "customer",
+var debit = db.define(
+  "debit",
   {
-    id_user: { type: Sequelize.STRING, primaryKey: true },
+    id_user: Sequelize.STRING,
     name: Sequelize.STRING,
-    password: Sequelize.STRING,
-    address: Sequelize.STRING,
-    id_number: Sequelize.STRING,
-    registration: Sequelize.DATE,
-    id_status: Sequelize.INTEGER,
+    debit: Sequelize.STRING,
+    status_withdrawal: Sequelize.STRING,
+    date_withdrawal: Sequelize.DATE,
   },
   {
     freezeTableName: true,
@@ -32,9 +31,9 @@ var customer = db.define(
   }
 );
 
-customer.hasOne(Status, { foreignKey: "id_status" });
-customer.belongsTo(Status, { foreignKey: "id_status" });
+debit.hasOne(Customer, { foreignKey: "id_user" });
+debit.belongsTo(Customer, { foreignKey: "id_user" });
 
 // customer.removeAttribute("id");
 // customer.removeAttribute("id_status");
-module.exports = customer;
+module.exports = debit;
