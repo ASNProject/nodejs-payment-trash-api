@@ -119,7 +119,7 @@ controller.post = async function (req, res) {
       credit: req.body.credit,
     });
     res.status(200).json({
-      message: "Berhasil tambah data debit",
+      message: "Berhasil tambah data credit",
       data: credit,
     });
   } catch (error) {

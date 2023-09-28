@@ -107,7 +107,7 @@ controller.post = async function (req, res) {
       value: req.body.value,
     });
     res.status(200).json({
-      message: "Berhasil tambah data customer",
+      message: "Berhasil tambah data load",
       data: load,
     });
   } catch (error) {
@@ -133,7 +133,7 @@ controller.put = async function (req, res) {
       }
     );
     res.status(200).json({
-      message: "Berhasil mengubah data customer",
+      message: "Berhasil mengubah data load",
       data: load,
     });
   } catch (error) {
@@ -151,7 +151,7 @@ controller.delete = async function (req, res) {
       },
     });
     res.status(200).json({
-      message: "Berhasil hapus data customer",
+      message: "Berhasil hapus data load",
       data: load,
     });
   } catch (error) {
