@@ -7,6 +7,19 @@ Clone this project
 ```
 https://github.com/ASNProject/nodejs-payment-trash-api.git
 ```
+Dependencies
+```
+npm install --save express
+npm install nodemon
+npm install sequelize mysql2
+npm install --save mysql
+npm install http
+npm install save
+npm install morgan
+npm install --save cors
+npm install --save body-parser
+npm install dotenv 
+```
 Run program
 ```
 nodemon server.js
