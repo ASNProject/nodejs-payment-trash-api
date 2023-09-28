@@ -32,3 +32,41 @@ localhost:3000/customer/xxx
 ```
 
 
+Type Waste Routes
+```
+- Get All
+localhost:3000/type-waste (for search: /type-waste?keyword=xxxx)
+
+- Get by ID
+localhost:3000/type-waste/xxx
+
+- Post Data
+localhost:3000/type-waste
+
+- Put Data
+localhost:3000/type-waste/xxx
+
+-Delete Data
+localhost:3000/type-waste/xxx
+```
+
+
+Load Routes
+```
+- Get All
+localhost:3000/load (for search: /load?keyword=xxxx)
+
+- Get by ID
+localhost:3000/load/xxx
+
+- Post Data
+localhost:3000/load
+
+- Put Data
+localhost:3000/load/xxx
+
+-Delete Data
+localhost:3000/load/xxx
+```
+
+
