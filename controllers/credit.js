@@ -19,13 +19,16 @@ const { Op } = require("sequelize");
 controller.getAll = async function (req, res) {
   const search = req.query.keyword;
   try {
-    let debit;
+    let credit;
 
     if (search) {
-      debit = await model.debit.findAll({
+      credit = await model.credit.findAll({
         include: [
           {
             model: model.customer,
+          },
+          {
+            model: model.type_waste,
           },
         ],
         where: {
@@ -44,23 +47,26 @@ controller.getAll = async function (req, res) {
         },
       });
     } else {
-      debit = await model.debit.findAll({
+      credit = await model.credit.findAll({
         include: [
           {
             model: model.customer,
+          },
+          {
+            model: model.type_waste,
           },
         ],
       });
     }
 
-    if (debit.length > 0) {
+    if (credit.length > 0) {
       res.status(200).json({
-        message: "Get method debit",
-        data: debit,
+        message: "Get method credit",
+        data: credit,
       });
     } else {
       res.status.status(200).json({
-        message: "Tidak ada data",
+        message: "Tidak ada credit",
         data: [],
       });
     }
@@ -73,20 +79,23 @@ controller.getAll = async function (req, res) {
 
 controller.getOne = async function (req, res) {
   try {
-    let debit = await model.debit.findAll({
+    let credit = await model.credit.findAll({
       include: [
         {
           model: model.customer,
+        },
+        {
+          model: model.type_waste,
         },
       ],
       where: {
         id_user: req.params.id_user,
       },
     });
-    if (debit.length > 0) {
+    if (credit.length > 0) {
       res.status(200).json({
-        message: "Get method debit",
-        data: debit,
+        message: "Get method credit",
+        data: credit,
       });
     } else {
       res.status.status(200).json({
@@ -103,14 +112,15 @@ controller.getOne = async function (req, res) {
 
 controller.post = async function (req, res) {
   try {
-    let debit = await model.debit.create({
+    let credit = await model.credit.create({
       id_user: req.body.id_user,
-      debit: req.body.debit,
-      status_withdrawal: req.body.status_withdrawal,
+      id_type: req.body.id_type,
+      weight: req.body.weight,
+      credit: req.body.credit,
     });
     res.status(200).json({
       message: "Berhasil tambah data debit",
-      data: debit,
+      data: credit,
     });
   } catch (error) {
     res.status(404).json({
@@ -121,11 +131,12 @@ controller.post = async function (req, res) {
 
 controller.put = async function (req, res) {
   try {
-    let debit = await model.debit.update(
+    let credit = await model.credit.update(
       {
         id_user: req.body.id_user,
-        debit: req.body.debit,
-        status_withdrawal: req.body.status_withdrawal,
+        id_type: req.body.id_type,
+        weight: req.body.weight,
+        credit: req.body.credit,
       },
       {
         where: {
@@ -134,8 +145,8 @@ controller.put = async function (req, res) {
       }
     );
     res.status(200).json({
-      message: "Berhasil mengubah data debit",
-      data: debit,
+      message: "Berhasil mengubah data credit",
+      data: credit,
     });
   } catch (error) {
     res.status(404).json({
@@ -146,14 +157,14 @@ controller.put = async function (req, res) {
 
 controller.delete = async function (req, res) {
   try {
-    let debit = await model.debit.destroy({
+    let credit = await model.credit.destroy({
       where: {
         id_user: req.params.id_user,
       },
     });
     res.status(200).json({
-      message: "Berhasil hapus data debit",
-      data: debit,
+      message: "Berhasil hapus data credit",
+      data: credit,
     });
   } catch (error) {
     res.status(404).json({

@@ -15,14 +15,16 @@
 const Sequelize = require("sequelize");
 const db = require("../config/database/database");
 const Customer = require("./customer");
+const TypeWaste = require("./type_waste");
 
-var debit = db.define(
-  "debit",
+var credit = db.define(
+  "credit",
   {
     id_user: Sequelize.STRING,
-    debit: Sequelize.DOUBLE,
-    status_withdrawal: Sequelize.STRING,
-    date_withdrawal: Sequelize.DATE,
+    id_type: Sequelize.INTEGER,
+    weight: Sequelize.DOUBLE,
+    credit: Sequelize.DOUBLE,
+    date_credit: Sequelize.DATE,
   },
   {
     freezeTableName: true,
@@ -30,9 +32,11 @@ var debit = db.define(
   }
 );
 
-debit.hasOne(Customer, { foreignKey: "id_user" });
-debit.belongsTo(Customer, { foreignKey: "id_user" });
+credit.hasOne(Customer, { foreignKey: "id_user" });
+credit.belongsTo(Customer, { foreignKey: "id_user" });
+credit.hasOne(TypeWaste, { foreignKey: "id_type" });
+credit.belongsTo(TypeWaste, { foreignKey: "id_type" });
 
 // customer.removeAttribute("id");
 // customer.removeAttribute("id_status");
-module.exports = debit;
+module.exports = credit;

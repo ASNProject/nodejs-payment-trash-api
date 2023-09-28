@@ -21,6 +21,7 @@ const customerRoutes = require("./routes/customer");
 const typeWasteRoutes = require("./routes/type_waste");
 const loadRoutes = require("./routes/load");
 const debitRoutes = require("./routes/debit");
+const creditRoutes = require("./routes/credit");
 
 app.use(morgan("dev"));
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -29,6 +30,7 @@ app.use("/customer", customerRoutes);
 app.use("/type-waste", typeWasteRoutes);
 app.use("/load", loadRoutes);
 app.use("/debit", debitRoutes);
+app.use("/credit", creditRoutes);
 
 app.use((req, res, next) => {
   const error = new Error("API tidak ditemukan");

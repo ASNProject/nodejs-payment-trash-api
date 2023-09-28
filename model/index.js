@@ -17,6 +17,7 @@ const status = require("./status");
 const type_waste = require("./type_waste");
 const load = require("./load");
 const debit = require("./debit");
+const credit = require("./credit");
 const model = {};
 
 model.customer = customer;
@@ -24,4 +25,5 @@ model.status = status;
 model.type_waste = type_waste;
 model.load = load;
 model.debit = debit;
+model.credit = credit;
 module.exports = model;
