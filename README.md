@@ -69,4 +69,22 @@ localhost:3000/load/xxx
 localhost:3000/load/xxx
 ```
 
+Debit Routes
+```
+- Get All
+localhost:3000/debit (for search: /debit?keyword=xxxx)
+
+- Get by ID
+localhost:3000/debit/xxx
+
+- Post Data
+localhost:3000/debit
+
+- Put Data
+localhost:3000/debit/xxx
+
+-Delete Data
+localhost:3000/debit/xxx
+```
+
 
