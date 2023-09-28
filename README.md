@@ -5,8 +5,8 @@
 ## Clone & Run
 Clone this project
 ```
-[git clone https://github.com/ASNProject/Sembada-Tech-2.git](https://github.com/ASNProject/Payment-Trash-API.git)https://github.com/ASNProject/Payment-Trash-API.git
-](https://github.com/ASNProject/nodejs-payment-trash-api.git)https://github.com/ASNProject/nodejs-payment-trash-api.git```
+https://github.com/ASNProject/nodejs-payment-trash-api.git
+```
 Run program
 ```
 node index.js
