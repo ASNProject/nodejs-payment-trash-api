@@ -41,16 +41,16 @@ Customer Routes
 localhost:3000/customer (for search: /customer?keyword=xxxx)
 
 - Get by ID
-localhost:3000/customer/xxx
+localhost:3000/customer/id_user
 
 - Post Data
 localhost:3000/customer
 
 - Put Data
-localhost:3000/customer/xxx
+localhost:3000/customer/id_user
 
 -Delete Data
-localhost:3000/customer/xxx
+localhost:3000/customer/id_user
 ```
 
 
@@ -60,16 +60,16 @@ Type Waste Routes
 localhost:3000/type-waste (for search: /type-waste?keyword=xxxx)
 
 - Get by ID
-localhost:3000/type-waste/xxx
+localhost:3000/type-waste/id_type
 
 - Post Data
 localhost:3000/type-waste
 
 - Put Data
-localhost:3000/type-waste/xxx
+localhost:3000/type-waste/id_type
 
 -Delete Data
-localhost:3000/type-waste/xxx
+localhost:3000/type-waste/id_type
 ```
 
 
@@ -79,16 +79,16 @@ Load Routes
 localhost:3000/load (for search: /load?keyword=xxxx)
 
 - Get by ID
-localhost:3000/load/xxx
+localhost:3000/load/id
 
 - Post Data
 localhost:3000/load
 
 - Put Data
-localhost:3000/load/xxx
+localhost:3000/load/id
 
 -Delete Data
-localhost:3000/load/xxx
+localhost:3000/load/id
 ```
 
 Debit Routes
@@ -97,16 +97,16 @@ Debit Routes
 localhost:3000/debit (for search: /debit?keyword=xxxx)
 
 - Get by ID
-localhost:3000/debit/xxx
+localhost:3000/debit/id_user
 
 - Post Data
 localhost:3000/debit
 
 - Put Data
-localhost:3000/debit/xxx
+localhost:3000/debit/id_user
 
 -Delete Data
-localhost:3000/debit/xxx
+localhost:3000/debit/id_user
 ```
 
 Credit Routes
@@ -115,16 +115,16 @@ Credit Routes
 localhost:3000/credit (for search: /credit?keyword=xxxx)
 
 - Get by ID
-localhost:3000/credit/xxx
+localhost:3000/credit/id_user
 
 - Post Data
 localhost:3000/credit
 
 - Put Data
-localhost:3000/credit/xxx
+localhost:3000/credit/id_user
 
 -Delete Data
-localhost:3000/credit/xxx
+localhost:3000/credit/id_user
 ```
 
 Database Structure
