@@ -87,7 +87,7 @@ controller.getOne = async function (req, res) {
         data: load,
       });
     } else {
-      res.status.status(200).json({
+      res.status(200).json({
         message: "Tidak ada data",
         data: [],
       });
