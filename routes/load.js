@@ -18,7 +18,7 @@ const db = require("../config/database/database");
 const controller = require("../controllers/index");
 
 router.get("/", controller.load.getAll);
-router.get("/:id", controller.load.getOne);
+router.get("/:code", controller.load.getOne);
 router.post("/", controller.load.post);
 router.put("/:id", controller.load.put);
 router.delete("/:id", controller.load.delete);
