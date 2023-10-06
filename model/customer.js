@@ -25,6 +25,7 @@ var customer = db.define(
     id_number: Sequelize.STRING,
     registration: Sequelize.DATE,
     id_status: Sequelize.INTEGER,
+    id_load: Sequelize.STRING,
   },
   {
     freezeTableName: true,

@@ -105,6 +105,7 @@ controller.post = async function (req, res) {
       address: req.body.address,
       id_number: req.body.id_number,
       id_status: req.body.id_status,
+      id_load: req.body.id_load,
     });
     res.status(200).json({
       message: "Berhasil tambah data customer",
@@ -126,6 +127,7 @@ controller.put = async function (req, res) {
         password: req.body.password,
         address: req.body.address,
         id_number: req.body.id_number,
+        id_load: req.body.id_load,
       },
       {
         where: {
