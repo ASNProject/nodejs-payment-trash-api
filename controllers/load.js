@@ -78,7 +78,7 @@ controller.getOne = async function (req, res) {
   try {
     let load = await model.load.findAll({
       where: {
-        id: req.params.id,
+        code: req.params.code,
       },
     });
     if (load.length > 0) {
